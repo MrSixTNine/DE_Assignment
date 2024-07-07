@@ -1,0 +1,49 @@
+services:
+  postgresql:
+    container_name: postgres
+    image: postgres:alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: master_tk
+      POSTGRES_PASSWORD: 120344
+    volumes:
+      - postgresql_data:/var/lib/postgresql/data 
+    ports:
+      - 5432:5432
+
+  dbgate:
+    container_name: dbgate
+    image: dbgate/dbgate:alpine
+    ports:
+      - 3000:3000
+    restart: unless-stopped
+    environment:
+      CONNECTIONS: de_assignment
+      LABEL_de_assignment: de_assignment
+      URL_de_assignment: postgres://master_tk:120344@postgres:5432/master_tk
+      ENGINE_de_assignment: postgres@dbgate-plugin-postgres
+    volumes:
+      - dbgate_data:/root/.dbgate
+
+
+  app:
+    build: .
+    container_name: de_assignment
+    volumes:
+      - .:/app
+    command: python pipeline.py
+    depends_on:
+      - postgresql
+    environment:
+      - DATABASE_TYPE=postgresql
+      - DBAPI=psycopg2
+      - USER=master_tk
+      - PASSWORD=120344
+      - HOST=postgresql
+      - PORT=5432
+      - DATABASE=master_tk
+
+volumes:
+  postgresql_data:
+  dbgate_data:
+    external: true

@@ -1,1 +1,5 @@
-# DE_Assignment
+# Data_Engineer_Assignment
+1.run "./docker_command_kit.bat" on terminal or command promt or double click file "docker_command_kit.bat".
+2.type on your browser "localhost:3000"
+now you will see data that has send to table on postgreSQL.
+

@@ -1,0 +1,20 @@
+2024-07-07 05:07:16,982 - INFO - Running script: ingest_product_catalog.py
+2024-07-07 05:07:17,661 - INFO - Successfully ran ingest_product_catalog.py: C:\Users\User\Desktop\Data_Engineer_Assignment\Python Script
+Data successfully inserted into pre_prd.product_catalog
+
+2024-07-07 05:07:17,661 - INFO - Running script: ingest_customer_transactions.py
+2024-07-07 05:07:18,353 - INFO - Successfully ran ingest_customer_transactions.py: Data successfully inserted into pre_prd.customer_transactions
+
+2024-07-07 05:07:18,353 - INFO - Running script: process_product_sales_detail.py
+2024-07-07 05:07:19,078 - INFO - Successfully ran process_product_sales_detail.py: Data successfully inserted into prd.product_sales_detail
+
+2024-07-07 05:24:47,943 - INFO - Running script: ingest_product_catalog.py
+2024-07-07 05:24:48,620 - INFO - Successfully ran ingest_product_catalog.py: C:\Users\User\Desktop\Data_Engineer_Assignment\Python Script
+Data successfully inserted into pre_prd.product_catalog
+
+2024-07-07 05:24:48,621 - INFO - Running script: ingest_customer_transactions.py
+2024-07-07 05:24:49,304 - INFO - Successfully ran ingest_customer_transactions.py: Data successfully inserted into pre_prd.customer_transactions
+
+2024-07-07 05:24:49,304 - INFO - Running script: process_product_sales_detail.py
+2024-07-07 05:24:50,030 - INFO - Successfully ran process_product_sales_detail.py: Data successfully inserted into prd.product_sales_detail
+
