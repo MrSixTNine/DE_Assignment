@@ -40,7 +40,7 @@ df['price'] = pd.to_numeric(df['price'], errors='coerce')
 df['quantity'] = pd.to_numeric(df['quantity'], errors='coerce')
 # Filter out rows where 'price' is less than 0 or NaN
 df = df[(df['price'] >= 0) & (df['price'].notna())]
-df = df[(df['quantity'] >= 0) & (df['price'].notna())]
+df = df[(df['quantity'] >= 0) & (df['quantity'].notna())]
 
 # Store data to postgresql database
 insert_into_postgres(df, table_name, schema_name)
